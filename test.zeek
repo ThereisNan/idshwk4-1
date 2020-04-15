@@ -18,13 +18,13 @@ event zeek_init()
 						  {
 							  if(s1$sum / s2$sum > 0.2)
 							  {
-								  if((s3$unique as double) / s1$sum > 0.5)
+								  if(s3$unique / s1$sum > 0.5)
 								  {
 									  print fmt("%s is a scanner with %d scan attempts on %d urls.", key$host, s1$num, s3$unique);
 								  }
 							  }
 						  }
-					  };
+					  }
 	]);
 }
 
